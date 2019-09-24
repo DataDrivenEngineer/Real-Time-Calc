@@ -16,7 +16,7 @@ A real time calculator that logs calculations as they happen and immediately sha
 ## Tech stack
 
 - Server side: Flask-SocketIO (eventlet)
-- Client side: VueJS + Socket.IO
+- Client side: VueJS + Socket.IO + Bulma framework for style
 - Database: PostgreSQL 9.6.8 running locally in the Docker container
 
 ## Installation
