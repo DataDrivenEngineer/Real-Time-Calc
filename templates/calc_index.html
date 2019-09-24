@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+
+<div id="vmapp">
+    <section class="calcWrapper">
+        <div class="calcContainer">
+            <input class="input calc" type="text" :placeholder="placeholder" :value="equation">
+            <!--div class="currentCalculation">
+                <p class="calc"> [[ helloValue ]] </p>
+            </div-->
+            <div class="buttonsContainer">
+                <div class="numbersContainer">
+                    <div class="calcPanel">
+                        <a @click="equation += '7'" class="button calc">7</a>
+                        <a @click="equation += '8'" class="button calc">8</a>
+                        <a @click="equation += '9'" class="button calc">9</a>
+                        <a @click="equation += '/'" class="button calc">/</a>
+                    </div>
+                    <div class="calcPanel">
+                        <a @click="equation += '4'" class="button calc">4</a>
+                        <a @click="equation += '5'" class="button calc">5</a>
+                        <a @click="equation += '6'" class="button calc">6</a>
+                        <a @click="equation += '*'" class="button calc">*</a>
+                    </div>
+                    <div class="calcPanel">
+                        <a @click="equation += '1'" class="button calc">1</a>
+                        <a @click="equation += '2'" class="button calc">2</a>
+                        <a @click="equation += '3'" class="button calc">3</a>
+                        <a @click="equation += '-'" class="button calc">-</a>
+                    </div>
+                    <div class="calcPanel">
+                        <a @click="equation += '0'" class="button calc">0</a>
+                        <a @click="calculate" class="button equals">=</a>
+                        <a @click="equation += '+'" class="button calc">+</a>
+                    </div>
+                </div>
+                <div class="resetContainer">
+                    <a @click="equation = ''"class="button reset">C</a>
+                </div>
+            </div>
+            <div class="results">
+                <div class="resultItem" v-for="item in firstTen">
+                    [[ item ]]
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="../static/app.js"></script>
+
+{% endblock %}
